@@ -19,7 +19,7 @@
 -- Current Database: `graduation_project`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `graduation_project` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `graduation_project` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 USE `graduation_project`;
 
@@ -32,11 +32,12 @@ DROP TABLE IF EXISTS `people_like`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `people_like` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `people_id` int(11) NOT NULL,
+  `people_id` char(16) NOT NULL,
+  `title` char(128) NOT NULL,
   `item_type` char(16) NOT NULL,
-  `item_id` int(11) NOT NULL,
+  `item_url` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8 COMMENT='鐢ㄦ埛鍠滄?';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,4 +53,4 @@ CREATE TABLE `people_like` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-04  1:35:57
+-- Dump completed on 2015-05-04  3:51:21

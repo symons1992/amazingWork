@@ -1,8 +1,8 @@
 #-*- coding:utf -*-
 
 class People:
-    def __init__(self):
-        self.id   = ''
+    def __init__(self, id):
+        self.id   = id
         self.homepage = ''
         self.name = ''
         self.age  = '' 
@@ -19,5 +19,4 @@ class People:
 
     def count_rev_contact(self):
         return len(self.contact)
-
 
