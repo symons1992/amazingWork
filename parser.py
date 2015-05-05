@@ -35,12 +35,13 @@ class Parser:
 	@classmethod
 	def parseContact(cls, people_id, content):
 		people_id_list = []
-		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
+		peopleIdPattern = re.compile('people/([\w\-_\d\.]+)/')
 		page = html.fromstring(content)
 		peoples = page.find_class('obu')
 		con = Con()
 		for people in peoples:
 			url = people.xpath('./dd/a')[0].get('href')
+			print url
 			contact_id = peopleIdPattern.findall(url)[0]
 			print contact_id
 			people_id_list.append(contact_id)
@@ -52,12 +53,13 @@ class Parser:
 	@classmethod
 	def parseRevContact(cls, people_id, content):
 		people_id_list = []
-		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
+		peopleIdPattern = re.compile('people/([\w\-_\d\.]+)/')
 		page = html.fromstring(content)
 		peoples = page.find_class('obu')
 		con = Con()
 		for people in peoples:
 			url = people.xpath('./dd/a')[0].get('href')
+			print url
 			rev_contact_id = peopleIdPattern.findall(url)[0]
 			print rev_contact_id
 			people_id_list.append(rev_contact_id)
