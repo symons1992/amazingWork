@@ -31,12 +31,33 @@ class Parser:
 			con.insert_people_like((people_id, title.encode('utf8'), Type, url))
 		con.close()
 
-	def contactParser(self, content):
-		# 主要作用就是解析用户关注/被关注人的信息
-		cp = re.compile('<dd><a href="([^"]+)">([^<]+)</a></dd>')
-		contactList = cp.findall(content)
-		peopleList = [ item[1] for item in contactList ]
-		return peopleList
+	#解析用户关注信息
+	@classmethod
+	def parseContact(cls, people_id, content):
+		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
+		page = html.fromstring(content)
+		peoples = page.find_class('obu')
+		con = Con()
+		for people in peoples:
+			url = people.xpath('./dd/a')[0].get('href')
+			contact_id = peopleIdPattern.findall(url)[0]
+			print contact_id
+			con.insert_people_contact((people_id,contact_id))
+		con.close()
 
+	#解析用户被关注信息
+	@classmethod
+	def parseRevContact(cls, people_id, content):
+		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
+		page = html.fromstring(content)
+		peoples = page.find_class('obu')
+		con = Con()
+		for people in peoples:
+			url = people.xpath('./dd/a')[0].get('href')
+			rev_contact_id = peopleIdPattern.findall(url)[0]
+			print rev_contact_id
+			#做一个reverse操作，因为该函数解析的是被xxx关注
+			con.insert_people_contact((rev_contact_id,people_id))
+		con.close()
 
 

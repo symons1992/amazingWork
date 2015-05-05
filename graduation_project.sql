@@ -24,6 +24,20 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `graduation_project` /*!40100 DEFAULT C
 USE `graduation_project`;
 
 --
+-- Table structure for table `people_contacts`
+--
+
+DROP TABLE IF EXISTS `people_contacts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `people_contacts` (
+  `people_id` char(16) NOT NULL,
+  `contact_id` char(16) NOT NULL,
+  PRIMARY KEY (`people_id`,`contact_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户关注表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `people_like`
 --
 
@@ -37,7 +51,7 @@ CREATE TABLE `people_like` (
   `item_type` char(16) NOT NULL,
   `item_url` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8 COMMENT='鐢ㄦ埛鍠滄?';
+) ENGINE=InnoDB AUTO_INCREMENT=1312 DEFAULT CHARSET=utf8 COMMENT='鐢ㄦ埛鍠滄?';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,4 +67,4 @@ CREATE TABLE `people_like` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-04  3:51:21
+-- Dump completed on 2015-05-06  4:20:11
