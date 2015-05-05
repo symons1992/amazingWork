@@ -41,7 +41,6 @@ class Parser:
 		con = Con()
 		for people in peoples:
 			url = people.xpath('./dd/a')[0].get('href')
-			print url
 			contact_id = peopleIdPattern.findall(url)[0]
 			print contact_id
 			people_id_list.append(contact_id)
@@ -59,7 +58,6 @@ class Parser:
 		con = Con()
 		for people in peoples:
 			url = people.xpath('./dd/a')[0].get('href')
-			print url
 			rev_contact_id = peopleIdPattern.findall(url)[0]
 			print rev_contact_id
 			people_id_list.append(rev_contact_id)
