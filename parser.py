@@ -34,6 +34,7 @@ class Parser:
 	#解析用户关注信息
 	@classmethod
 	def parseContact(cls, people_id, content):
+		people_id_list = []
 		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
 		page = html.fromstring(content)
 		peoples = page.find_class('obu')
@@ -42,12 +43,15 @@ class Parser:
 			url = people.xpath('./dd/a')[0].get('href')
 			contact_id = peopleIdPattern.findall(url)[0]
 			print contact_id
+			people_id_list.append(contact_id)
 			con.insert_people_contact((people_id,contact_id))
 		con.close()
+		return people_id_list
 
 	#解析用户被关注信息
 	@classmethod
 	def parseRevContact(cls, people_id, content):
+		people_id_list = []
 		peopleIdPattern = re.compile('people/([\w\-_\d]+)/')
 		page = html.fromstring(content)
 		peoples = page.find_class('obu')
@@ -56,8 +60,9 @@ class Parser:
 			url = people.xpath('./dd/a')[0].get('href')
 			rev_contact_id = peopleIdPattern.findall(url)[0]
 			print rev_contact_id
+			people_id_list.append(rev_contact_id)
 			#做一个reverse操作，因为该函数解析的是被xxx关注
 			con.insert_people_contact((rev_contact_id,people_id))
 		con.close()
-
+		return people_id_list
 

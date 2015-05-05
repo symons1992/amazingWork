@@ -41,9 +41,9 @@ class CrawlData:
 
 		raw_content = urllib2.urlopen(request).read()
 		# 解析入库
-		Parser.parseContact(self.id, raw_content)
+		people_id_list = Parser.parseContact(self.id, raw_content)
 
-		return 
+		return people_id_list
 
 
 	# 抓取用户被关注信息
@@ -56,9 +56,9 @@ class CrawlData:
 
 		raw_content = urllib2.urlopen(request).read()
 		# 解析入库
-		Parser.parseRevContact(self.id, raw_content)
+		people_id_list = Parser.parseRevContact(self.id, raw_content)
 
-		return 
+		return people_id_list
 
 
 
