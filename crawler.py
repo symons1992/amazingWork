@@ -10,6 +10,12 @@ import time
 class CrawlData:
 	def __init__(self, id):
 		self.id = id
+	# 抓取用户看过的电影信息，可翻页
+	def crawl_movie(self):
+		pass
+	# 抓去用户看过的书籍信息，可翻页
+	def crawl_book(self):
+		pass
 	# 抓取用户喜欢页信息，可翻页
 	def crawl_like(self):
 		base_url = "http://www.douban.com/people/people_id/likes/"
