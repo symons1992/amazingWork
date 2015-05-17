@@ -1,5 +1,7 @@
 #-*- coding:utf -*-
 
+
+#TODO : 考虑是否要保留这个models
 class People:
     def __init__(self, id):
         self.id   = id

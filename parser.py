@@ -11,7 +11,15 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 class Parser:
-	#解析用户喜欢这个页面
+	#解析用户读书页面
+	@classmethod
+	def parseBook(cls, people_id, content):
+		pass
+	#解析用户电影页面
+	@classmethod
+	def parseMovie(cls, people_id, content):
+		pass
+	#解析用户喜欢页面
 	@classmethod
 	def parseLike(cls, people_id, content):
 		page = html.fromstring(content)
