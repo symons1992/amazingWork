@@ -39,8 +39,6 @@ if __name__ == '__main__':
 
 	
 	'''
-
-
 	Dic = {}
 	r = open(FILE,'r').read()
 	LIST = jieba.analyse.extract_tags(r)

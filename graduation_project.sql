@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.41, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.6.24, for osx10.10 (x86_64)
 --
 -- Host: localhost    Database: graduation_project
 -- ------------------------------------------------------
--- Server version	5.5.41-0ubuntu0.12.04.1
+-- Server version	5.6.24
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -51,7 +51,7 @@ CREATE TABLE `people_like` (
   `item_type` char(16) NOT NULL,
   `item_url` char(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1312 DEFAULT CHARSET=utf8 COMMENT='鐢ㄦ埛鍠滄?';
+) ENGINE=InnoDB AUTO_INCREMENT=49089 DEFAULT CHARSET=utf8 COMMENT='鐢ㄦ埛鍠滄?';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,4 +67,4 @@ CREATE TABLE `people_like` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-06  4:20:11
+-- Dump completed on 2015-05-22  1:02:56
