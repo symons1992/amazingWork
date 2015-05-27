@@ -1,4 +1,4 @@
-I#-*- coding:utf8 -*-
+#-*- coding:utf8 -*-
 
 from parser import Parser
 from models import People
