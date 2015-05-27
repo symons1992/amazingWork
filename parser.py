@@ -1,4 +1,10 @@
 #-*- coding:utf8 -*-
+
+'''
+	@author: symons1992
+	@date: 20150527
+'''
+
 import urllib2
 import json
 from lxml import html
