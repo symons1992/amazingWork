@@ -23,12 +23,19 @@ class Con:
 		self.cur.execute(sql_str, values)
 		self.conn.commit()
 	
-	def query(self):
-		pass
+	def query(self, sql_str):
+		res = self.cur.execute(sql_str)
+		return self.cur.fetchall()
 
 	def close(self):
 		self.cur.close()
 		self.conn.close()
+
+
+if __name__ == '__main__':
+	c = Con()
+	c.query('select count(*) from people_like where people_id="haha";')
+	c.close()
 
 
 

@@ -1,0 +1,3 @@
+#-*- coding:utf8 -*-
+
+douban_cookie = 'bid="5G+UJ6DX0Sw"; ll="108295"; ct=y; ps=y; ue="234039148@qq.com"; dbcl2="40985129:ViTEC4dwNAE"; ck="5rhC"; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1435168195%2C%22http%3A%2F%2Fbook.douban.com%2Fsubject%2F1468602%2F%22%5D; push_noty_num=0; push_doumail_num=0; _pk_id.100001.8cb4=701cc0657e3d6938.1431251555.42.1435170275.1435165957.; _pk_ses.100001.8cb4=*; __utmt=1; __utma=30149280.1264634443.1431251558.1435165616.1435168196.46; __utmb=30149280.108.10.1435168196; __utmc=30149280; __utmz=30149280.1435148468.44.26.utmcsr=v2ex.com|utmccn=(referral)|utmcmd=referral|utmcct=/t/200642; __utmv=30149280.4098; ap=1'
