@@ -1,0 +1,20 @@
+DOTA2 10 n
+SC2 10 n
+RTS 10 n
+计算机 10 n
+python 10 n
+Python 10 n
+acm 10 n
+php 10 n
+码农 10 n
+代码 10 n
+编码 10 n
+北京 10 n
+上海 10 n 
+日本 10 n
+vim 10 n
+魔兽 10 n
+nds 10 n
+3ds 10 n
+psv 10 n
+

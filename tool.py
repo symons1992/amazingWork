@@ -26,7 +26,7 @@ def get_user_like(user_name):
 	C = Con()
 	sql_str = 'select title from people_like where people_id="PEOPLE_ID";'
 	# query the user contact users and will make the result more useful
-	sql_str1 = 'select people_like.title from people_contacts inner join people_like on people_contacts.people_id=people_like.people_id where people_contacts.people_id="PEOPLE_ID" order by rand() limit 1000;'
+	sql_str1 = 'select people_like.title from people_contacts inner join people_like on people_contacts.people_id=people_like.people_id where people_contacts.people_id="PEOPLE_ID" order by rand() limit 2000;'
 	sql_str = sql_str.replace('PEOPLE_ID', user_name)
 	sql_str1 = sql_str1.replace('PEOPLE_ID', user_name)
 	res = C.query(sql_str)
@@ -56,13 +56,17 @@ def init_dic(people_like_list):
 	return res, total
 
 def map_tag(userLikeDict, total):
-	res = { k:0 for k,v in tag.items() } 
+	# 拉普拉斯平滑
+	res = { k:1 for k,v in tag.items() } 
 	for i in userLikeDict:
 		for j in tag.keys():
 			if i[0] in tag[j]:
 				res[j] += i[1]
 	for k, v in res.items():
-		v = v*1.0/total * 100
+		if total == 0:
+			v = 0
+		else:
+			v = v*1.0/total * 100
 	res = sorted(res.items(), key=lambda key:key[1], reverse=True)
 
 	return res[:10]

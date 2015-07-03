@@ -6,4 +6,7 @@
 4. 20150505，分词用结巴分词，已经下载好了python包。 
 5. 20150512，准备把这些用django封装起来，搭一个平台去做，在平台上可以做各种各样的事情。更实用一些吧。
 6. 计划，5.24号前，实现贝叶斯算法。论文，写完前两个模块。
+7. 20150618, give a report about a user , such like how many articles he likes and the total of the words. And the best i can give a classify.
+8. create a list map to tag.
+
 

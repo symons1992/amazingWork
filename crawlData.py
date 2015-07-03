@@ -24,8 +24,9 @@ def Crawl(people_id):
 			# 如果这个人的数据已经存在了那么就不用去抓他的数据了
 			if not if_exist_user(temp.people_id):
 				c.crawl_like()
-			contact_people = c.crawl_contact() or []
-			print 'contact_people: ',contact_people
+			contact_people = []
+			#contact_people = c.crawl_contact() or []
+			#print 'contact_people: ',contact_people
 			#这里取消了关注他的用户，然后把纬度降低到2维
 			#contact_people = contact_people + c.crawl_rev_contact()
 			# 去重，去掉互相关注的用户
@@ -33,7 +34,8 @@ def Crawl(people_id):
 			for i in contact_people:
 				step = Step(i, temp.step + 1)
 				q.put(step)
-		except :
+		except Exception,ex:
+			print Exception,ex
 			print 'error id ', str(temp.people_id)
 			w.write('error_id: %s\n'%(temp.people_id))
 	return 
