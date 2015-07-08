@@ -1,4 +1,4 @@
-##毕业设计进度
+##项目进度
 
 1. 20150504，搞定了根据用户id取得用户喜欢数据（标题，用户id，文章类型，文章url），而且建立好了数据库，可以写进去了。
 2. 20150505，计划今天搞定用户关注的小组，并创建数据库。 熟悉朴素贝叶斯分类算法，要把算法代码用python实现。
@@ -8,5 +8,6 @@
 6. 计划，5.24号前，实现贝叶斯算法。论文，写完前两个模块。
 7. 20150618, give a report about a user , such like how many articles he likes and the total of the words. And the best i can give a classify.
 8. create a list map to tag.
+9. 搭建一个网站，让这个东西可以让用户访问，不过还需要思考这个数据需要时间去抓的问题，反正更加直观一些吧
 
 
